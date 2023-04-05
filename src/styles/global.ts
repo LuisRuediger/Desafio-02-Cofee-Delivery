@@ -17,7 +17,7 @@ font-size: 62.5%;
   }
 
 body {
-  background: ${(props) => props.theme.background};
+  margin-inline: auto;
   color: ${(props) => props.theme['base-text']};
   -webkit-font-smoothing: antialiased;
 }
