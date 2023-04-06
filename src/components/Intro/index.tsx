@@ -4,12 +4,13 @@ import {
   DivTimer,
   DivPackage,
   DivCoffee,
-  IntroContainer,
-  IntroSubtitle,
-  IntroTitle,
-  Items,
-  ItemsList,
-  TitleContainer,
+  DivContainer,
+  Span,
+  H2,
+  Li,
+  Ul,
+  DivTitle,
+  Background,
 } from './styles'
 
 // eslint-disable-next-line import/no-absolute-path
@@ -17,45 +18,45 @@ import IntroCoffee from '/assets/introCoffe.svg'
 
 export function Intro() {
   return (
-    <IntroContainer>
-      <TitleContainer>
-        <IntroTitle>
-          Encontre o café perfeito para qualquer hora do dia
-        </IntroTitle>
-        <IntroSubtitle>
-          Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
-          hora
-        </IntroSubtitle>
+    <Background>
+      <DivContainer>
+        <DivTitle>
+          <H2>Encontre o café perfeito para qualquer hora do dia</H2>
+          <Span>
+            Com o Coffee Delivery você recebe seu café onde estiver, a qualquer
+            hora
+          </Span>
 
-        <ItemsList>
-          <Items>
-            <DivCart>
-              <ShoppingCart size={16} weight="fill" />
-            </DivCart>
-            <span>Compra simples e segura</span>
-          </Items>
-          <Items>
-            <DivTimer>
-              <Timer size={16} weight="fill" />
-            </DivTimer>
-            <span>Compra simples e segura</span>
-          </Items>
-          <Items>
-            <DivPackage>
-              <Package size={16} weight="fill" />
-            </DivPackage>
-            <span>Compra simples e segura</span>
-          </Items>
-          <Items>
-            <DivCoffee>
-              <Coffee size={16} weight="fill" />
-            </DivCoffee>
-            <span>Compra simples e segura</span>
-          </Items>
-        </ItemsList>
-      </TitleContainer>
+          <Ul>
+            <Li>
+              <DivCart>
+                <ShoppingCart size={16} weight="fill" />
+              </DivCart>
+              <span>Compra simples e segura</span>
+            </Li>
+            <Li>
+              <DivTimer>
+                <Timer size={16} weight="fill" />
+              </DivTimer>
+              <span>Compra simples e segura</span>
+            </Li>
+            <Li>
+              <DivPackage>
+                <Package size={16} weight="fill" />
+              </DivPackage>
+              <span>Compra simples e segura</span>
+            </Li>
+            <Li>
+              <DivCoffee>
+                <Coffee size={16} weight="fill" />
+              </DivCoffee>
+              <span>Compra simples e segura</span>
+            </Li>
+          </Ul>
+        </DivTitle>
 
-      <img src={IntroCoffee} alt="" />
-    </IntroContainer>
+        <img src={IntroCoffee} alt="" />
+      </DivContainer>
+    </Background>
   )
 }

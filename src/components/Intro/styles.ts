@@ -3,14 +3,18 @@ import styled from 'styled-components'
 // eslint-disable-next-line import/no-absolute-path
 import background from '/assets/introBackground.svg'
 
-export const IntroContainer = styled.div`
+export const Background = styled.div`
+  background-image: url(${background});
+  height: 54.4rem;
+`
+
+export const DivContainer = styled.div`
   max-width: 112rem;
-  margin-top: 9.4rem;
+  padding-top: 9.4rem;
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url(${background});
 
   img {
     width: 476px;
@@ -18,18 +22,18 @@ export const IntroContainer = styled.div`
   }
 `
 
-export const TitleContainer = styled.div`
+export const DivTitle = styled.div`
   max-width: 55.8rem;
 `
 
-export const IntroTitle = styled.h2`
+export const H2 = styled.h2`
   font-family: 'Baloo 2', cursive;
   font-size: 4.8rem;
   line-height: 6.24rem;
   color: ${(props) => props.theme['base-title']};
 `
 
-export const IntroSubtitle = styled.span`
+export const Span = styled.span`
   display: block;
   margin-top: 1rem;
   font-size: 2rem;
@@ -37,7 +41,7 @@ export const IntroSubtitle = styled.span`
   color: ${(props) => props.theme['base-subtitle']};
 `
 
-export const ItemsList = styled.ul`
+export const Ul = styled.ul`
   list-style: none;
   margin-top: 6.6rem;
 
@@ -46,7 +50,7 @@ export const ItemsList = styled.ul`
   flex: 1;
 `
 
-export const Items = styled.li`
+export const Li = styled.li`
   margin-right: 4rem;
   margin-top: 2rem;
   display: flex;
@@ -60,7 +64,7 @@ export const Items = styled.li`
   }
 `
 
-export const BaseDiv = styled.div`
+export const BaseItem = styled.div`
   width: 3.2rem;
   height: 3.2rem;
   color: ${(props) => props.theme.background};
@@ -71,15 +75,15 @@ export const BaseDiv = styled.div`
   align-items: center;
 `
 
-export const DivCart = styled(BaseDiv)`
+export const DivCart = styled(BaseItem)`
   background: ${(props) => props.theme['yellow-dark']};
 `
-export const DivTimer = styled(BaseDiv)`
+export const DivTimer = styled(BaseItem)`
   background: ${(props) => props.theme.yellow};
 `
-export const DivPackage = styled(BaseDiv)`
+export const DivPackage = styled(BaseItem)`
   background: ${(props) => props.theme['base-text']};
 `
-export const DivCoffee = styled(BaseDiv)`
+export const DivCoffee = styled(BaseItem)`
   background: ${(props) => props.theme.purple};
 `
