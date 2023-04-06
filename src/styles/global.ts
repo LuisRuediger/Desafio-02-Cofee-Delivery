@@ -13,13 +13,19 @@ font-size: 62.5%;
 
 :focus {
     outline: 0;
-    box-shadow: 0 0 0 2px ${(props) => props.theme.purple}
+    box-shadow: 0 0 0 2px ${(props) => props.theme.purple};
   }
 
 body {
   margin-inline: auto;
   color: ${(props) => props.theme['base-text']};
   -webkit-font-smoothing: antialiased;
+  
+  #root {
+    max-width: 144rem;
+    margin-inline: auto;
+    background: ${(props) => props.theme.background};
+  }
 }
 
 body, input, textarea, button {
