@@ -8,8 +8,8 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 1200px) {
-    margin: 1rem;
+  @media only screen and (max-width: 1140px) {
+    margin-inline: 1rem;
   }
 `
 
