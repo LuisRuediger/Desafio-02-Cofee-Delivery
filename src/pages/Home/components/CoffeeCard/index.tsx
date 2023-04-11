@@ -16,7 +16,7 @@ interface CoffeeCardProps {
   src: string
   name: string
   description: string
-  price: number
+  price: string
 }
 
 export function CoffeeCard({
