@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const DivCardContainer = styled.div`
   max-width: 25.6rem;
   height: 31rem;
-  margin-top: 5.4rem;
   padding-inline: 2rem;
   background: ${(props) => props.theme['base-card']};
   border-radius: 0.6rem 3.6rem;

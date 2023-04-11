@@ -11,23 +11,32 @@ import {
   DivShoppingCart,
 } from './styles'
 
-// eslint-disable-next-line import/no-absolute-path
-import Coffe from '/assets/coffe.svg'
+interface CoffeeCardProps {
+  tag: string
+  src: string
+  name: string
+  description: string
+  price: number
+}
 
-export function CoffeeCard() {
+export function CoffeeCard({
+  tag,
+  name,
+  description,
+  price,
+  src,
+}: CoffeeCardProps) {
   return (
     <>
       <DivCardContainer>
-        <img src={Coffe} alt="" />
-        <SpanType>TRADICIONAL</SpanType>
-        <H2CoffeTitle>Expresso Tradicional</H2CoffeTitle>
-        <SpanCoffeDescription>
-          O tradicional café feito com água quente e grãos moídos
-        </SpanCoffeDescription>
+        <img src={src} alt="" />
+        <SpanType>{tag}</SpanType>
+        <H2CoffeTitle>{name}</H2CoffeTitle>
+        <SpanCoffeDescription>{description}</SpanCoffeDescription>
 
         <DivBuy>
           <PPrice>
-            R$ <strong>9,90</strong>
+            R$ <strong>{price}</strong>
           </PPrice>
 
           <DivCounterContainer>
