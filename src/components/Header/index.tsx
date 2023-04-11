@@ -1,5 +1,6 @@
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { HeaderContainer, Ul, Location, Cart } from './styles'
+import { NavLink } from 'react-router-dom'
 
 // eslint-disable-next-line import/no-absolute-path
 import Logo from '/assets/logo.svg'
@@ -7,7 +8,9 @@ import Logo from '/assets/logo.svg'
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={Logo} alt="" />
+      <NavLink to="/" title="home">
+        <img src={Logo} alt="" />
+      </NavLink>
       <nav>
         <Ul>
           <Location>
@@ -15,7 +18,9 @@ export function Header() {
             Porto alegre
           </Location>
           <Cart>
-            <ShoppingCart size={22} weight="fill" />
+            <NavLink to="/checkout" title="checkout">
+              <ShoppingCart size={22} weight="fill" />
+            </NavLink>
           </Cart>
         </Ul>
       </nav>

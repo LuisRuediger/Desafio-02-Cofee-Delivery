@@ -8,6 +8,11 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
 
+  a.active:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0;
+  }
+
   @media only screen and (max-width: 1140px) {
     margin-inline: 1rem;
   }
@@ -45,10 +50,19 @@ export const Cart = styled.li`
   width: 3.8rem;
   height: 3.8rem;
   border-radius: 6px;
-  color: ${(props) => props.theme['yellow-dark']};
   background: ${(props) => props.theme['yellow-light']};
   cursor: pointer;
-
   justify-content: center;
   align-items: center;
+
+  a {
+    color: ${(props) => props.theme['yellow-dark']};
+    display: flex;
+    align-items: center;
+
+    &.active:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0;
+    }
+  }
 `
