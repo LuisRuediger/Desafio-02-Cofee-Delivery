@@ -1,4 +1,4 @@
-import { ShoppingCartSimple } from 'phosphor-react'
+import { Minus, Plus, ShoppingCartSimple } from 'phosphor-react'
 import {
   DivCardContainer,
   H2CoffeTitle,
@@ -9,7 +9,10 @@ import {
   DivCounterContainer,
   DivCounter,
   DivShoppingCart,
+  ButtonShoppingCart,
 } from './styles'
+import { useContext } from 'react'
+import { CounterContext } from '../../../../contexts/CounterContext'
 
 interface CoffeeCardProps {
   tag: string
@@ -17,6 +20,7 @@ interface CoffeeCardProps {
   name: string
   description: string
   price: string
+  counter: number
 }
 
 export function CoffeeCard({
@@ -25,7 +29,10 @@ export function CoffeeCard({
   description,
   price,
   src,
+  counter,
 }: CoffeeCardProps) {
+  const { handleDecreaseCounter, handleIncreaseCounter } =
+    useContext(CounterContext)
   return (
     <>
       <DivCardContainer>
@@ -40,7 +47,15 @@ export function CoffeeCard({
           </PPrice>
 
           <DivCounterContainer>
-            <DivCounter>-1+</DivCounter>
+            <DivCounter>
+              <ButtonShoppingCart onClick={handleDecreaseCounter}>
+                <Minus size={14} weight="bold" />
+              </ButtonShoppingCart>
+              {counter}
+              <ButtonShoppingCart onClick={handleIncreaseCounter}>
+                <Plus size={14} weight="bold" />
+              </ButtonShoppingCart>
+            </DivCounter>
             <DivShoppingCart>
               <ShoppingCartSimple size={22} weight="fill" />
             </DivShoppingCart>

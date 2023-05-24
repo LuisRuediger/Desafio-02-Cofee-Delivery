@@ -81,6 +81,10 @@ export const DivCounter = styled.div`
   border-radius: 6px;
   background: ${(props) => props.theme['base-button']};
   color: ${(props) => props.theme['base-title']};
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
 
 export const DivShoppingCart = styled.div`
@@ -97,5 +101,18 @@ export const DivShoppingCart = styled.div`
 
   &:hover {
     background: ${(props) => props.theme.purple};
+  }
+`
+
+export const ButtonShoppingCart = styled.button`
+  border: none;
+  background: ${(props) => props.theme['base-button']};
+  color: ${(props) => props.theme.purple};
+
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: ${(props) => props.theme['purple-dark']};
   }
 `
