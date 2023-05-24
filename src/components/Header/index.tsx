@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 // eslint-disable-next-line import/no-absolute-path
 import Logo from '/assets/logo.svg'
-import { BShoppingCart } from '../ShoppingCart'
+import { CounterIconCart } from '../CounterIconCart'
 
 export function Header() {
   return (
@@ -18,7 +18,7 @@ export function Header() {
             <MapPin size={22} weight="fill" />
             Porto alegre
           </Location>
-          <BShoppingCart />
+          <CounterIconCart />
         </Ul>
       </nav>
     </HeaderContainer>

@@ -3,7 +3,7 @@ import { Cart } from './styles'
 import { NavLink } from 'react-router-dom'
 import { Badge } from '@mui/material'
 
-export function BShoppingCart() {
+export function CounterIconCart() {
   const badgeStyle = {
     '& .MuiBadge-badge': {
       color: '#FFF',
