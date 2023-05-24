@@ -4,12 +4,15 @@ import { Router } from './Router'
 
 import { GlobalStyle } from './styles/global'
 import { defaultTheme } from './styles/themes/default'
+import { CounterContextProvider } from './contexts/CounterContext'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-        <Router />
+        <CounterContextProvider>
+          <Router />
+        </CounterContextProvider>
       </BrowserRouter>
 
       <GlobalStyle />
