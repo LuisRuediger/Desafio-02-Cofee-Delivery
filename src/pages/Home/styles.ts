@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const DivCoffeListContainer = styled.div`
+export const DivCoffeeListContainer = styled.div`
   max-width: 112rem;
   margin-inline: auto;
 `

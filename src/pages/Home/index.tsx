@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { CoffeeCard } from './components/CoffeeCard'
 import { Intro } from './components/Intro/index'
-import { DivCoffeListContainer, DivCoffeeList, H2 } from './styles'
+import { DivCoffeeListContainer, DivCoffeeList, H2 } from './styles'
 import { v4 as uuidv4 } from 'uuid'
 import { CounterContext } from '../../contexts/CounterContext'
 
@@ -135,7 +135,7 @@ export function Home() {
   return (
     <>
       <Intro />
-      <DivCoffeListContainer>
+      <DivCoffeeListContainer>
         <H2>Nossos cafés</H2>
         <DivCoffeeList>
           {coffeeList.map((card) => {
@@ -152,7 +152,7 @@ export function Home() {
             )
           })}
         </DivCoffeeList>
-      </DivCoffeListContainer>
+      </DivCoffeeListContainer>
     </>
   )
 }
