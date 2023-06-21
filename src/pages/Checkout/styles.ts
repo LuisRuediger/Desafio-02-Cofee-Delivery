@@ -94,6 +94,9 @@ export const DivInputsContainer = styled.div`
 
 export const DivCoffeeSelectedContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
 `
 
 export const DivPaymentContainer = styled.div`
