@@ -23,7 +23,7 @@ body {
   
   #root {
     max-width: 144rem;
-    height: 100vh;
+    min-height: 100vh;
     margin-inline: auto;
     background: ${(props) => props.theme.background};
   }
