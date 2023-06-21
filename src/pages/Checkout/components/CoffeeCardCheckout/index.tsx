@@ -7,8 +7,8 @@ import {
 import { useContext } from 'react'
 import { CounterContext } from '../../../../contexts/CounterContext'
 
-import img from '../../../../public/assets/coffees/arabe.svg'
-import { DivCoffeeCardCheckout } from './CoffeCardCheckout'
+import img from '../../../../../public/assets/coffees/arabe.svg'
+import { DivCoffeeCardCheckout } from './styles'
 
 export function CoffeeCardCheckout() {
   const { counter, handleDecreaseCounter, handleIncreaseCounter } =

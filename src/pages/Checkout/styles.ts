@@ -92,13 +92,6 @@ export const DivInputsContainer = styled.div`
   }
 `
 
-export const DivCoffeeSelectedContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  flex: 1;
-`
-
 export const DivPaymentContainer = styled.div`
   display: flex;
   gap: 1.2rem;
@@ -129,5 +122,55 @@ export const DivPaymentContainer = styled.div`
 
   span {
     font-size: 1.2rem;
+  }
+`
+
+export const DivCoffeeSelectedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+
+  .coffeeContainer {
+    padding: 4rem;
+    border-radius: 6px 44px;
+    background-color: ${(props) => props.theme['base-card']};
+
+    display: flex;
+    gap: 2.4rem;
+    flex-direction: column;
+
+    .totalPayment {
+      display: flex;
+      gap: 1.2rem;
+      flex-direction: column;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .total {
+        font-size: 2rem;
+        font-weight: 700;
+        color: ${(props) => props.theme['base-subtitle']};
+      }
+
+      button {
+        text-decoration: none;
+        border: none;
+        border-radius: 6px;
+        padding: 1.2rem;
+        font-size: 1.4rem;
+        line-height: 2.3rem;
+        background-color: ${(props) => props.theme.yellow};
+        color: ${(props) => props.theme.white};
+        transition: background-color 100ms linear;
+
+        &:hover {
+          background-color: ${(props) => props.theme['yellow-dark']};
+        }
+      }
+    }
   }
 `

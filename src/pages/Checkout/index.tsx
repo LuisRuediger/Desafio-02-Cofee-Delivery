@@ -15,7 +15,7 @@ import {
   DivPaymentContainer,
   Title,
 } from './styles'
-import { CoffeeCardCheckout } from './components/CoffeeCardCheckout/CoffeeCardCheckout'
+import { CoffeeCardCheckout } from './components/CoffeeCardCheckout/index'
 
 export function Checkout() {
   return (
@@ -85,7 +85,27 @@ export function Checkout() {
 
         <DivCoffeeSelectedContainer>
           <Title>Cafés selecionados</Title>
-          <CoffeeCardCheckout />
+          <div className="coffeeContainer">
+            <CoffeeCardCheckout />
+            <CoffeeCardCheckout />
+
+            <div className="totalPayment">
+              <div className="totalItems">
+                <span>Total de itens</span>
+                <span>R$ 29.70</span>
+              </div>
+              <div className="shipping">
+                <span>Entrega</span>
+                <span>R$ 3.50</span>
+              </div>
+              <div className="total">
+                <span>Total</span>
+                <span>R$ 33.20</span>
+              </div>
+
+              <button>Confirmar pedido</button>
+            </div>
+          </div>
         </DivCoffeeSelectedContainer>
       </DivContainer>
     </>
