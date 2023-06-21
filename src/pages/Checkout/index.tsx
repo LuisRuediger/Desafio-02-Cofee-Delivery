@@ -12,6 +12,7 @@ import {
   DivFormContainer,
   DivInfo,
   DivInputsContainer,
+  DivPaymentContainer,
   Title,
 } from './styles'
 
@@ -64,18 +65,20 @@ export function Checkout() {
               </div>
             </DivInfo>
 
-            <div className="credito">
-              <CreditCard size={16} />
-              <span>CARTÃO DE CRÉDITO</span>
-            </div>
-            <div className="debito">
-              <Bank size={16} />
-              <span>CARTÃO DE DÉBITO</span>
-            </div>
-            <div className="dinheito">
-              <Money size={16} />
-              <span>DINHEIRO</span>
-            </div>
+            <DivPaymentContainer>
+              <div className="credito">
+                <CreditCard size={16} />
+                <span>CARTÃO DE CRÉDITO</span>
+              </div>
+              <div className="debito">
+                <Bank size={16} />
+                <span>CARTÃO DE DÉBITO</span>
+              </div>
+              <div className="dinheito">
+                <Money size={16} />
+                <span>DINHEIRO</span>
+              </div>
+            </DivPaymentContainer>
           </DivForm>
         </DivFormContainer>
 

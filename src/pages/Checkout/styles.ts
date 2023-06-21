@@ -95,3 +95,36 @@ export const DivInputsContainer = styled.div`
 export const DivCoffeeSelectedContainer = styled.div`
   display: flex;
 `
+
+export const DivPaymentContainer = styled.div`
+  display: flex;
+  gap: 1.2rem;
+
+  div {
+    max-width: 18rem;
+    max-height: 5.1rem;
+
+    padding: 1.6rem;
+    border-radius: 6px;
+    background-color: ${(props) => props.theme['base-button']};
+    transition: background-color 100ms linear;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    flex: 1;
+
+    &:hover {
+      background-color: ${(props) => props.theme['base-hover']};
+    }
+  }
+
+  svg {
+    color: ${(props) => props.theme.purple};
+  }
+
+  span {
+    font-size: 1.2rem;
+  }
+`
