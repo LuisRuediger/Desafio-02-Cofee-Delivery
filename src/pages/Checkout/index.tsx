@@ -16,6 +16,7 @@ import {
   Title,
 } from './styles'
 import { CoffeeCardCheckout } from './components/CoffeeCardCheckout/index'
+import { NavLink } from 'react-router-dom'
 
 export function Checkout() {
   return (
@@ -103,7 +104,9 @@ export function Checkout() {
                 <span>R$ 33.20</span>
               </div>
 
-              <button>Confirmar pedido</button>
+              <NavLink to="/success" title="success">
+                <button>Confirmar pedido</button>
+              </NavLink>
             </div>
           </div>
         </DivCoffeeSelectedContainer>

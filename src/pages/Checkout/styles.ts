@@ -156,6 +156,11 @@ export const DivCoffeeSelectedContainer = styled.div`
         color: ${(props) => props.theme['base-subtitle']};
       }
 
+      a {
+        display: flex;
+        text-decoration: none;
+      }
+
       button {
         text-decoration: none;
         border: none;
@@ -166,6 +171,7 @@ export const DivCoffeeSelectedContainer = styled.div`
         background-color: ${(props) => props.theme.yellow};
         color: ${(props) => props.theme.white};
         transition: background-color 100ms linear;
+        flex: 1;
 
         &:hover {
           background-color: ${(props) => props.theme['yellow-dark']};
