@@ -2,7 +2,6 @@ import { Minus, Plus, ShoppingCartSimple } from 'phosphor-react'
 import {
   DivCardContainer,
   H2CoffeTitle,
-  SpanType,
   SpanCoffeDescription,
   DivBuy,
   PPrice,
@@ -10,12 +9,13 @@ import {
   DivCounter,
   DivShoppingCart,
   ButtonShoppingCart,
+  DivTag,
 } from './styles'
 import { useContext } from 'react'
 import { CounterContext } from '../../../../contexts/CounterContext'
 
 interface CoffeeCardProps {
-  tag: string
+  tag: string[]
   src: string
   name: string
   description: string
@@ -37,7 +37,11 @@ export function CoffeeCard({
     <>
       <DivCardContainer>
         <img src={src} alt="" />
-        <SpanType>{tag}</SpanType>
+        <DivTag>
+          {tag.map((item) => {
+            return <span key={item}>{item}</span>
+          })}
+        </DivTag>
         <H2CoffeTitle>{name}</H2CoffeTitle>
         <SpanCoffeDescription>{description}</SpanCoffeDescription>
 

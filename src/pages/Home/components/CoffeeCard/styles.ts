@@ -19,15 +19,21 @@ export const DivCardContainer = styled.div`
   }
 `
 
-export const SpanType = styled.span`
-  display: block;
-  margin-top: 1.2rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 10rem;
-  font-weight: 700;
-  font-size: 10px;
-  background: ${(props) => props.theme['yellow-light']};
-  color: ${(props) => props.theme['yellow-dark']};
+export const DivTag = styled.div`
+  display: flex;
+  gap: 0.4rem;
+
+  span {
+    display: block;
+    margin-top: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10rem;
+    font-weight: 700;
+    font-size: 10px;
+    background: ${(props) => props.theme['yellow-light']};
+    color: ${(props) => props.theme['yellow-dark']};
+    text-transform: uppercase;
+  }
 `
 
 export const H2CoffeTitle = styled.h2`
