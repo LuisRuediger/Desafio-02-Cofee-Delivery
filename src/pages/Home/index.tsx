@@ -3,9 +3,10 @@ import { CoffeeCard } from './components/CoffeeCard'
 import { Intro } from './components/Intro/index'
 import { DivCoffeeListContainer, DivCoffeeList, H2 } from './styles'
 import { CounterContext } from '../../contexts/CounterContext'
+import { coffeeList } from '../../database/database'
 
 export function Home() {
-  const { counter, coffeeList } = useContext(CounterContext)
+  const { counter } = useContext(CounterContext)
 
   const formatPrice = new Intl.NumberFormat('pt-BR', {
     currency: 'BRL',
