@@ -10,6 +10,10 @@ export const H2 = styled.h2`
   font-weight: 800;
   font-size: clamp(2rem, 1.5vw, 3.2rem);
   margin-bottom: 5.4rem;
+
+  @media only screen and (max-width: 980px) {
+    margin-inline: 1rem;
+  }
 `
 
 export const DivCoffeeList = styled.div`
