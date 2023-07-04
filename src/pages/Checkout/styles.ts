@@ -90,6 +90,15 @@ export const DivInputsContainer = styled.div`
       color: ${(props) => props.theme['base-label']};
     }
   }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 `
 
 export const DivPaymentContainer = styled.div`
