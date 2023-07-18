@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import * as RadioGroup from '@radix-ui/react-radio-group'
 
 export const Title = styled.h2`
   font-family: 'Baloo 2';
@@ -101,36 +102,40 @@ export const DivInputsContainer = styled.div`
   }
 `
 
-export const DivPaymentContainer = styled.div`
+export const DivPaymentContainer = styled(RadioGroup.Root)`
   display: flex;
   gap: 1.2rem;
+`
 
-  div {
-    max-width: 18rem;
-    max-height: 5.1rem;
+export const PaymentButton = styled(RadioGroup.Item)`
+  max-width: 18rem;
+  max-height: 5.1rem;
+  font-size: 1.2rem;
+  padding: 1.6rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-color: ${(props) => props.theme['base-button']};
+  transition: background-color 100ms linear;
 
-    padding: 1.6rem;
-    border-radius: 6px;
-    background-color: ${(props) => props.theme['base-button']};
-    transition: background-color 100ms linear;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    flex: 1;
-
-    &:hover {
-      background-color: ${(props) => props.theme['base-hover']};
-    }
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  flex: 1;
 
   svg {
     color: ${(props) => props.theme.purple};
   }
 
-  span {
-    font-size: 1.2rem;
+  &:hover {
+    background-color: ${(props) => props.theme['base-hover']};
+  }
+
+  &[data-state='checked'],
+  &:focus {
+    background-color: ${(props) => props.theme['purple-light']};
+    border: 1px solid ${(props) => props.theme.purple};
+    outline: none;
   }
 `
 
@@ -184,6 +189,11 @@ export const DivCoffeeSelectedContainer = styled.div`
 
         &:hover {
           background-color: ${(props) => props.theme['yellow-dark']};
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.7;
         }
       }
     }
